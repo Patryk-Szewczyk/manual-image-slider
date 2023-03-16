@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" lang="pl-PL" />
+  <title></title>
+  <link rel="styleSheet" href="manual-img-slider-01-style.css" type="text/css" />
+</head>
+
+<body onload="now()">
+
+  <script src="manual-img-slider-01-func.js"></script>
+  
+  
+  <div class="image-slider">
+    <div class="image-slider-title">
+	  Manual image slider #01
+	</div>
+	<div class="image-slider-navbar">
+	  <div class="back-arrow-dimension" onclick="minus()"> 
+	    <div class="back-arrow-appropriate"></div>
+	  </div>
+	  <div class="nav-empty-area"></div>
+	  <div class="next-arrow-dimension" onclick="plus()"> 
+	    <div class="next-arrow-appropriate"></div>
+	  </div>
+	</div>
+	<div class="image-area-dimension">
+	  <!--Trzeba zrobić w Java Script funkcję - pętlę, która za każdym razem przesuwa blok z obrazami w prawo lub lewo, o 450px-->
+	  <div id="imgGp" class="image-group">
+	    <div class="image-group-block">
+		  <img class="image-group-image" src="image-1.jpg" alt="obraz_1" />
+		</div>
+		<div class="image-group-block">
+		  <img class="image-group-image" src="image-2.jpg" alt="obraz_2" />
+		</div>
+		<div class="image-group-block">
+		  <img class="image-group-image" src="image-3.jpg" alt="obraz_3" />
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  <div class="slider-info-block">
+    <dl class="slider-info">
+	  <p>
+	    <div id="pole"></div>
+	  </p>
+	  <dt>Usage ideas:</dt>
+	  <dd>- Ad blocks</dd>
+	  <dd>- Photo gallery</dd>
+	  <dd>- Blocks of short information about something or someone's achievements</dd>
+    </dl>
+  </div>
+  
+</body>
+
+</html>

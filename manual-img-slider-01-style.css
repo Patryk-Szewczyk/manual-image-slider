@@ -1,0 +1,121 @@
+body {
+	margin: 0px;
+}
+
+.image-slider {
+    margin: 60px auto auto auto; 	/*Umieszcznie trochę do dołu, sachowując element wyśrodkowany w poziomie.*/
+	width: 450px;
+	height: 350px;
+	background-color: rgba(218,218,255,1.0)/*rgba(100,255,100,1.0)*/;
+}
+    .image-slider-title {
+		width: 100%;
+		height: 30px;
+		padding: 18px 0px 18px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(100,220,100,1.0);
+		color: rgba(80,110,80,1.0);
+		font-family: Comic Sans MS;
+		font-size: 110%;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	.image-slider-navbar {
+		width: 100%;
+		height: 40px;
+		background-color: rgba(90,180,90,1.0);
+	}
+	    .back-arrow-dimension {
+			float: left;
+			width: 50%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(95,190,95,1.0);
+		}
+		    .back-arrow-appropriate {
+			    transform: rotate(225deg);
+			}
+		.next-arrow-dimension {
+			float: left;
+			width: 50%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(95,190,95,1.0);
+		}
+		    .next-arrow-appropriate {
+			    transform: rotate(45deg);
+			}
+		    .back-arrow-appropriate, 
+			.next-arrow-appropriate {
+				border-style: solid;
+				border-width: 4px 4px 0px 0px;
+				border-color: #111111;
+				padding: 4px; /*Kontrola wielkości obramowania, tutaj - strzałki*/
+			}
+		.back-arrow-dimension:hover,
+        .next-arrow-dimension:hover		{
+			background-color: rgba(95,180,95,1.0);
+		}
+		.back-arrow-dimension:active,
+        .next-arrow-dimension:active		{
+			background-color: rgba(150,220,150,1.0);
+		}
+	.image-area-dimension {
+		width: 100%;
+		height: 284px; /*284px = 350 - (30px + (18px*2)) = 350px - 66px = 284px | 30px = .image-slider-title {width}, 
+		                                                                        | 18px*2 = .image-slider-title {padding-top & padding-bottom}*/
+		background-color: rgba(255,180,180,0.7);
+		overflow: hidden;
+	}
+	    .image-group {
+			width: 1350px;
+			height: 100%; /*UWAGA!!! Nie wiem dlaczego, ale kiedy wezmę wartość z bloku nadrzędnego (284px), 
+			                         wówczas ów blok jest wyższy, od .image-area-dimension*/
+			position: relative; /*MEGA WAŻNA WŁĄŚCIWOŚĆ!!! Dzięki niej zadziała @keyrfames slideImages, odpowiiadające za zmianę pozycji {left} i {right}*/
+			right: 450px;
+			display: flex;
+			background-color: rgba(180,180,255,0.7);
+			/*animation: slideImages 20s infinite;*/
+			transition-duration: 1s; /*ULTRA HIPER GIGA MEGA SUPER ALFA OMEGA WAŻNA RZECZ!!!!!!!!!!!!*/
+			                         /*Dzięki niej dana funkcja w JS trwa tyle ile wynosi wartość własności {transition-duration}!*/
+		}
+		    .image-group-block {
+				width: 450px;
+				height: 100%;
+				background-color: rgba(180,255,180,0.7);
+				box-shadow: inset 0px 0px 30px 3px rgba(90,128,90,0.7);
+			}
+			    .image-group-image {
+					width: 100%;
+					height: 100%;
+				}
+		/*@keyframes slideImages {
+			0% {right: 0px;} *//*UWAGA!!! Właściwość ta jest powiązana z włąściwośćią {position}, bez niej {right} nie zadziała.*/
+			/*12% {right: 0px;}
+			25% {right: 450px;}
+			37% {right: 450px;}
+			50% {right: 900px;}
+			62% {right: 900px;}
+			75% {right: 450px;}
+			87% {right: 450px;}
+			100% {right: 0px;}
+		}*/
+		
+.slider-info-block {
+	margin: 30px 0px 0px 0px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+    .slider-info {
+	    color: rgb(60,60,60);
+	    font-family: Comic Sans MS;
+	    font-size: 150%;
+    }
